@@ -1,0 +1,82 @@
+<html lang="en" class="no-js">
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <link rel='stylesheet' href='../css/base.css'>
+</head>
+<body>
+    <header id='main-header' role='banner'>
+      <div id='title_bar' class='wrapper'>
+          <h1 id='title'>Resume Page - Lab #0</h1>
+      </div>
+    </header>
+    <!-- Content -->
+    <div id="content" role="main" class="wrapper clearfix container">
+        <div id="page-content-wrapper">
+            <div class="container-fluid row">
+                <div id="main-content" class="col-lg-12">
+                    
+                    <h1>Daniel's Resume</h1>
+                    <a href='../index.html'>Return Home</a>
+                    <hr>
+                    <div class="col-sm-6">
+                        <h3>About Me</h3>
+                        <p>Computer Engineer</p>
+                        <p>This page makes use of a table.</p>
+                    </div>
+                    <div class="table-responsive col-sm-6">
+                      <table class="table table-hover">
+                        <thead>
+                            <th>Job</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Location</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Griller</td>
+                                <td>08/23/11</td>
+                                <td>12/18/11</td>
+                                <td>Richards Building</td>
+                            </tr>
+                            <tr>
+                                <td>Custodial</td>
+                                <td>08/20/13</td>
+                                <td>04/19/14</td>
+                                <td>Clyde Building</td>
+                            </tr>
+                            <tr>
+                                <td>Computer Tech</td>
+                                <td>04/20/14</td>
+                                <td>1/13/16</td>
+                                <td>Library</td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <hr>
+                        <form id="addComment" action="php/addComment.php" method="post" enctype="multipart/form-data">
+                            <a name="anchor"></a>
+                            <label for="comment">Leave a Comment:</label>
+                            <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+                            <br>
+                            <input type="button" class="btn btn-success" onclick="buttonClicked();" value="Post">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function buttonClicked() {
+            var comment = document.getElementById("comment").textContent;
+            alert(comment);
+        }
+    </script>
+    
+</body>
+</html>

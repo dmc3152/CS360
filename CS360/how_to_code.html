@@ -1,0 +1,119 @@
+<html lang="en" class="no-js">
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <link rel='stylesheet' href='../css/base.css'>
+</head>
+<body>
+    <header id='main-header' role='banner'>
+      <div id='title_bar' class='wrapper'>
+          <h1 id='title'>Coding Page - Lab #0</h1>
+      </div>
+    </header>
+    <!-- Content -->
+    <div id="content" role="main" class="wrapper clearfix container">
+        
+
+        
+        <div id="page-content-wrapper">
+            <div class="container-fluid row">
+                <div id="main-content" class="col-lg-12">
+                    
+                    <h1>How to Code a Carousel</h1>
+                    <a href='../index.html'>Return Home</a>
+                    <hr>
+                    <p>This code was taken from <a href="http://www.getbootstrap.com">getbootstrap.com</a> and teaches how to make a carousel like the one below.</p>
+                    <div class="col-sm-6">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                          </ol>
+
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                              <img src="weather_2.jpg">
+                            </div>
+                            <div class="item">
+                              <img src="weather_4.jpg">
+                            </div>
+                            <div class="item">
+                              <img src="weather_5.jpg">
+                            </div>
+                          </div>
+
+                          <!-- Controls -->
+                          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <pre>
+&lt;div id="carousel-example-generic" class="carousel slide" data-ride="carousel"&gt;
+    &lt;!-- Indicators --&gt;
+    &lt;ol class="carousel-indicators"&gt;
+        &lt;li data-target="#carousel-example-generic" data-slide-to="0" class="active"&gt;&lt;/li&gt;
+        &lt;li data-target="#carousel-example-generic" data-slide-to="1"&gt;&lt;/li&gt;
+        &lt;li data-target="#carousel-example-generic" data-slide-to="2"&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;!-- Wrapper for slides --&gt;
+    &lt;div class="carousel-inner" role="listbox"&gt;
+        &lt;div class="item active"&gt;
+            &lt;img src="weather_2.jpg"&gt;
+        &lt;/div&gt;
+        &lt;div class="item"&gt;
+            &lt;img src="weather_4.jpg"&gt;
+        &lt;/div&gt;
+        &lt;div class="item"&gt;
+            &lt;img src="weather_5.jpg"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Controls --&gt;
+    &lt;a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"&gt;
+        &lt;span class="glyphicon glyphicon-chevron-left" aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;span class="sr-only"&gt;Previous&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"&gt;
+        &lt;span class="glyphicon glyphicon-chevron-right" aria-hidden="true"&gt;&lt;/span&gt;
+        &lt;span class="sr-only"&gt;Next&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+                        </pre>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <hr>
+                        <form id="addComment" action="php/addComment.php" method="post" enctype="multipart/form-data">
+                            <a name="anchor"></a>
+                            <label for="comment">Leave a Comment:</label>
+                            <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+                            <br>
+                            <input type="button" class="btn btn-success" onclick="buttonClicked();" value="Post">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function buttonClicked() {
+            var comment = document.getElementById("comment").textContent;
+            alert(comment);
+        }
+    </script>
+    
+</body>
+</html>

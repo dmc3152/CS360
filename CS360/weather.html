@@ -1,0 +1,82 @@
+<html lang="en" class="no-js">
+<head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <link rel='stylesheet' href='../css/base.css'>
+</head>
+<body>
+    <header id='main-header' role='banner'>
+      <div id='title_bar' class='wrapper'>
+          <h1 id='title'>Weather Forecast Page - Lab #0</h1>
+      </div>
+    </header>
+    <!-- Content -->
+    <div id="content" role="main" class="wrapper clearfix container">
+        <div id="page-content-wrapper">
+            <div class="container-fluid row">
+                <div id="main-content" class="col-lg-12">
+                    
+                    <h1>Weather Forecast</h1>
+                    <a href='../index.html'>Return Home</a>
+                    <hr>
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                          </ol>
+
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                              <img src="forecast_1.png">
+                            </div>
+                            <div class="item">
+                              <img src="forecast_3.png">
+                            </div>
+                            <div class="item">
+                              <img src="forecast_2.png">
+                            </div>
+                          </div>
+
+                          <!-- Controls -->
+                          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+                    <div class="col-sm-6">
+                        <h3>Weather in Provo</h3>
+                        <p>It will be cold over the next few days. Be sure to bring a coat with you.</p>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <hr>
+                        <form id="addComment" action="php/addComment.php" method="post" enctype="multipart/form-data">
+                            <a name="anchor"></a>
+                            <label for="comment">Leave a Comment:</label>
+                            <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+                            <br>
+                            <input type="button" class="btn btn-success" onclick="buttonClicked();" value="Post">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function buttonClicked() {
+            var comment = document.getElementById("comment").textContent;
+            alert(comment);
+        }
+    </script>
+    
+</body>
+</html>
